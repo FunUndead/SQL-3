@@ -44,3 +44,8 @@ CREATE TABLE if not exists Collection_and_song_ID (
 	Collection_ID INTEGER REFERENCES Collection (Id) NOT NULL,
 	Song_ID INTEGER REFERENCES List_of_songs (Id) NOT NULL
 );
+
+CREATE TABLE if not exists Artist_and_Album_ID (
+	Id_Artist INTEGER REFERENCES Performers (Id) NOT NULL,
+	Album_id INTEGER REFERENCES Albums (Id) NOT NULL
+);
