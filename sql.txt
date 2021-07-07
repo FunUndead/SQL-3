@@ -20,8 +20,8 @@ CREATE TABLE IF NOT EXISTS Albums (
 CREATE TABLE IF NOT EXISTS List_of_songs (
 	Id SERIAL PRIMARY KEY,
 	Song_title VARCHAR(60) NOT NULL,
-	Duration INTEGER NOT NULL CHECK(Duration > 0),
-	Album_id  INTEGER REFERENCES Albums (Id) NOT NULL
+	Album_id  INTEGER REFERENCES Albums (Id) NOT NULL,
+	Duration INTEGER NOT NULL CHECK(Duration > 0)
 );
 
 CREATE TABLE if not exists Genres (
