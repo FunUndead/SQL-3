@@ -13,8 +13,7 @@ CREATE TABLE IF NOT EXISTS Names_of_performers (
 CREATE TABLE IF NOT EXISTS Albums (
 	Id SERIAL PRIMARY KEY,
 	Album_title VARCHAR(60) NOT NULL,
-	Year_of_issue INTEGER NOT NULL CHECK(Year_of_issue > 0),
-	Id_Artist  INTEGER REFERENCES Performers(Id) NOT NULL
+	Year_of_issue INTEGER NOT NULL CHECK(Year_of_issue > 0)
 );
 
 CREATE TABLE IF NOT EXISTS List_of_songs (
@@ -49,3 +48,8 @@ CREATE TABLE if not exists Artist_and_Album_ID (
 	Id_Artist INTEGER REFERENCES Performers (Id) NOT NULL,
 	Album_id INTEGER REFERENCES Albums (Id) NOT NULL
 );
+
+
+
+
+
