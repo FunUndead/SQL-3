@@ -29,6 +29,7 @@ CREATE TABLE if not exists Genres (
 );
 
 CREATE TABLE if not exists Performers_and_Genre_ID (
+	Id SERIAL PRIMARY KEY,
 	Performers_id INTEGER REFERENCES Performers (Id) NOT NULL,
 	Genre_id INTEGER REFERENCES Genres (Id) NOT NULL
 );
@@ -40,11 +41,13 @@ CREATE TABLE IF NOT EXISTS Collection (
 );
 
 CREATE TABLE if not exists Collection_and_song_ID (
+	Id SERIAL PRIMARY KEY,
 	Collection_ID INTEGER REFERENCES Collection (Id) NOT NULL,
 	Song_ID INTEGER REFERENCES List_of_songs (Id) NOT NULL
 );
 
 CREATE TABLE if not exists Artist_and_Album_ID (
+	Id SERIAL PRIMARY KEY,
 	Id_Artist INTEGER REFERENCES Performers (Id) NOT NULL,
 	Album_id INTEGER REFERENCES Albums (Id) NOT NULL
 );
